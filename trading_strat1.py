@@ -1,4 +1,4 @@
-''' Applies the dual moving average crossover strategy to historical stock price data '''
+''' Applies a dual moving average crossover strategy to historical stock price data '''
 
 import pandas as pd
 import numpy as np
