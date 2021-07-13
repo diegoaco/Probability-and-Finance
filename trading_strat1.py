@@ -17,7 +17,7 @@ data30['Adj Close'] = data['Adj Close'].rolling(window=30).mean()
 data100 = pd.DataFrame()
 data100['Adj Close'] = data['Adj Close'].rolling(window=100).mean()
 
-# Define a new data frame to implement ths strategy:
+# Define a new data frame to implement the strategy:
 new = pd.DataFrame()
 new['Adj Close'] = data['Adj Close']
 new['data30'] = data30['Adj Close']
@@ -25,8 +25,8 @@ new['data100'] = data100['Adj Close']
 # We find the crossing points by looking at the difference between the short and long averages:
 new['diff'] = data30['Adj Close'] - data100['Adj Close']
 
-# Main function. It identifies where the difference changes sign and stores
-# the corresponding buy/sell price values. At points where there's on crossing,
+# Main function. It identifies where the 'diff' column changes sign and stores
+# the corresponding buy/sell price values. At points where there's no crossing,
 # it appends NaN (to avoid inconsistencies with object's lenght)
 def fun(dat):
     c = []
