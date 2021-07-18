@@ -34,10 +34,8 @@ for n in x:
     y.append(c[0][0])  # Store the option prices for each time
 
 # Plot the results and the bounding curves:
-y1 = np.array([s0 - K*(D**i) for i in x])
-
 plt.plot(x,y)
-plt.plot(x, y1)
+plt.plot(x, np.array([s0 - K*(D**i) for i in x]))
 plt.hlines(s0, 0, m, color = 'r')
 
 # Presents the data as a time series 
