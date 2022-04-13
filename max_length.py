@@ -17,6 +17,5 @@ m = 0
 for i in range(1, n+1):
     x = rd.uniform(0,1)
     y = rd.uniform(0,1)
-    l = [min(x,y), abs(x-y), 1 - max(x,y)]
     m = m + max(min(x,y), abs(x-y), 1 - max(x,y))
 print('Expected length:', m/n)
